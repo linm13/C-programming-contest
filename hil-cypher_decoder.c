@@ -1,31 +1,31 @@
-//°à¼¶£ºµç31
-//×÷Õß£ºÁÖ÷
-//Ñ§ºÅ£º2013010936
+//ç­çº§ï¼šç”µ31
+//ä½œè€…ï¼šæ—æ¿›
+//å­¦å·ï¼š2013010936
 #include<stdio.h>
 #include<string.h>
 #include<stdlib.h>
 int main()
 {
 	int choose=1;
-	int diterminant(int a[15][15],int N);//Çó¾ØÕóµÄĞĞÁĞÊ½º¯Êı
-	void adjoint(int a[15][15],int b[15][15],int N);//Çó°éËæ¾ØÕóº¯Êı
-	void decode(char *inputFilename,char* KeyName,char* outputFileName);//½âÃÜº¯Êı
+	int diterminant(int a[15][15],int N);//æ±‚çŸ©é˜µçš„è¡Œåˆ—å¼å‡½æ•°
+	void adjoint(int a[15][15],int b[15][15],int N);//æ±‚ä¼´éšçŸ©é˜µå‡½æ•°
+	void decode(char *inputFilename,char* KeyName,char* outputFileName);//è§£å¯†å‡½æ•°
 	char filename1[40]={'/0'},filename2[40]={'/0'},filename3[40]={'/0'};
-	printf("                           Ï£¶ûÃÜÂë½âÃÜ³ÌĞò\n");
-	printf("                                        ¡ª¡ªCreated by LinM\n");
+	printf("                           å¸Œå°”å¯†ç è§£å¯†ç¨‹åº\n");
+	printf("                                        â€”â€”Created by LinM\n");
 	while(choose==1)
 	{
 		printf("  ---------------------------------------------------------------------------\n");
-		printf("ÇëÊäÈëÃÜ³×¾ØÕóÎÄ¼şµØÖ·£º");
+		printf("è¯·è¾“å…¥å¯†åŒ™çŸ©é˜µæ–‡ä»¶åœ°å€ï¼š");
 		scanf("%s",filename1);
-		printf("ÇëÊäÈëÃÜÎÄÎÄ¼şµØÖ·£º");
+		printf("è¯·è¾“å…¥å¯†æ–‡æ–‡ä»¶åœ°å€ï¼š");
 		scanf("%s",filename2);
-		printf("ÇëÊäÈë½á¹ûÊä³öÎÄ¼şµÄµØÖ·£º");
+		printf("è¯·è¾“å…¥ç»“æœè¾“å‡ºæ–‡ä»¶çš„åœ°å€ï¼š");
 		scanf("%s",filename3);
 		decode(filename2,filename1,filename3);
-		printf("½âÃÜ³É¹¦£¡\n");
+		printf("è§£å¯†æˆåŠŸï¼\n");
 		printf("-----------------------------------------------------------------------------\n");
-		printf("ÊÇ·ñ¼ÌĞø½øĞĞ½âÃÜ(ÇëÊäÈçÊı×ÖĞòºÅ)£¿(1.ÊÇ 2.·ñ):");
+		printf("æ˜¯å¦ç»§ç»­è¿›è¡Œè§£å¯†(è¯·è¾“å¦‚æ•°å­—åºå·)ï¼Ÿ(1.æ˜¯ 2.å¦):");
 		scanf("%d",&choose);
 	}
 	return 0;
@@ -119,7 +119,7 @@ void decode(char *inputFilename,char* KeyName,char* outputFileName)
 	char shift_[500][15]={},m=0,miwen[8000]={'\0'},yuanwen[8000]={'\0'};
 	if((fp=fopen(KeyName,"r"))==NULL)
 	{
-		printf("¼ÓÃÜ¾ØÕóÊäÈëÎÄ¼şµØÖ·ÓĞÎó£¡\n");
+		printf("åŠ å¯†çŸ©é˜µè¾“å…¥æ–‡ä»¶åœ°å€æœ‰è¯¯ï¼\n");
 		exit(0);
 	}
 	fscanf(fp,"%d",&N);
@@ -133,12 +133,12 @@ void decode(char *inputFilename,char* KeyName,char* outputFileName)
 	fclose(fp);
 	if((diterminant(a,N)%61)==0)
 	{
-		printf("¸Ã¼ÓÃÜ¾ØÕó²»·ûºÏ¼ÓÃÜÒªÇó£¬ÓĞÎó£¡\n");
+		printf("è¯¥åŠ å¯†çŸ©é˜µä¸ç¬¦åˆåŠ å¯†è¦æ±‚ï¼Œæœ‰è¯¯ï¼\n");
 		exit(0);
 	}
 	if((fp=fopen(inputFilename,"r"))==NULL)
 	{
-		printf("ÃÜÎÄÊäÈëÎÄ¼şµØÖ·ÓĞÎó£¡\n");
+		printf("å¯†æ–‡è¾“å…¥æ–‡ä»¶åœ°å€æœ‰è¯¯ï¼\n");
 		exit(0);
 	}
 	for(i=0;i<8000;i++)
@@ -277,7 +277,7 @@ void decode(char *inputFilename,char* KeyName,char* outputFileName)
 	}
 	if((fp=fopen(outputFileName,"w"))==NULL)
 	{
-		printf("Ô­ÎÄÊä³öÎÄ¼şµØÖ·ÓĞÎó£¡\n");
+		printf("åŸæ–‡è¾“å‡ºæ–‡ä»¶åœ°å€æœ‰è¯¯ï¼\n");
 		exit(0);
 	}
 	for(i=0;i<8000;i++)
