@@ -11,4 +11,5 @@ The file hill-cypher_decoder.c is the code of the Hill-cypher decoder. You are s
 This is the interface of the matrix-calculator
 ![image](https://github.com/linm13/C-programming-contest/blob/master/INTERFACE.JPG)
 
-This is the interface of the hill-decipher.
+This is the interface of the hill-cipher-decoder.
+![image](https://github.com/linm13/C-programming-contest/blob/master/hill-decipher.JPG)
