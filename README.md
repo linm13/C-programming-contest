@@ -1,5 +1,5 @@
 
-# C-programming-contest
+# C-programming-contest 12/2013
 The code of my C programming contest. First prize.
 
 I am sorry about the language since I haven't translate it from Chinese to English yet.
